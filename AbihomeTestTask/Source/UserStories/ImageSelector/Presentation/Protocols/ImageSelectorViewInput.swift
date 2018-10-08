@@ -9,5 +9,6 @@
 import Foundation
 
 protocol ImageSelectorViewInput: AnyObject {
-    
+
+    func displayLoadingIsInProgress(_ inProgress: Bool)
 }

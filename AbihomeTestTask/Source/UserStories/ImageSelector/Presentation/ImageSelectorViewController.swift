@@ -15,19 +15,13 @@ class ImageSelectorViewController: UIViewController, StoryboardBased {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let imageService = ImageService()
-
-        imageService.fetchImageListWithCompletion { (imageLinks, error) in
-            imageLinks?.forEach {
-                guard let imageURL = URL(string: $0) else { return }
-                imageService.fetchImageWithURL(imageURL) { image, _ in
-                    print(image)
-                }
-            }
-        }
+        output?.onViewReady()
     }
 }
 
 extension ImageSelectorViewController: ImageSelectorViewInput {
-    
+
+    func displayLoadingIsInProgress(_ inProgress: Bool) {
+        
+    }
 }

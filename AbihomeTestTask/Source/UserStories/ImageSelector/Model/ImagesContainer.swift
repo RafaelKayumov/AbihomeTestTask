@@ -35,7 +35,8 @@ extension ImagesContainer {
 
     subscript(key: String) -> UIImage? {
         get {
-            return imageCache.value(forKey: key) as? UIImage
+            let keyStringObject = NSString(string: key)
+            return imageCache.object(forKey: keyStringObject)
         } set {
             let keyStringObject = NSString(string: key)
             if let value = newValue {

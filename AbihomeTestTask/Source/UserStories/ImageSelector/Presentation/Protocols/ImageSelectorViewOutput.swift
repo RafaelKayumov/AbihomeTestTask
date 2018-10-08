@@ -10,4 +10,5 @@ import Foundation
 
 protocol ImageSelectorViewOutput: AnyObject {
 
+    func onViewReady()
 }
