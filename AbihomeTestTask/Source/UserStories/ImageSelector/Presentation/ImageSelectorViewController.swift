@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ImageSelectorViewController.swift
 //  AbihomeTestTask
 //
 //  Created by Rafael Kayumov on 08.10.2018.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ImageSelectorViewController: UIViewController, StoryboardBased {
+
+    weak var output: ImageSelectorViewOutput?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,4 +26,8 @@ class ViewController: UIViewController {
             }
         }
     }
+}
+
+extension ImageSelectorViewController: ImageSelectorViewInput {
+    
 }
