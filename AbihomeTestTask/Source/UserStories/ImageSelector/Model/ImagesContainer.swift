@@ -6,13 +6,15 @@
 //  Copyright © 2018 Rafael Kayumov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 private let kImageSelectionHistoryCapacity = 2
 
 class ImagesContainer {
 
     private(set) var imageLinks = [String]()
+    private(set) var imageCache = NSCache<NSString, UIImage>()
+
     private(set) var imageSelectionHistory: [String] = {
         var array = [String]()
         array.reserveCapacity(kImageSelectionHistoryCapacity)

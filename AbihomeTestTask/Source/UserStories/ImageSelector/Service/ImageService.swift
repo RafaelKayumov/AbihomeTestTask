@@ -6,14 +6,17 @@
 //  Copyright © 2018 Rafael Kayumov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ImageService {
 
     typealias ImageListLoadingCompletion = ([String]?, Error?) -> Void
+    typealias ImageLoadingCompletion = (UIImage?, Error?) -> Void
+
+    private(set) var transport = NetworkingTransport()
 
     func fetchImageListWithCompletion(_ completion: @escaping ImageListLoadingCompletion) {
-        Networking.query(Route.list) { (data, response, error) in
+        transport.query(Route.list) { (data, response, error) in
             guard error == nil,
                 let data = data,
                 let imageURLStrings = try? JSONDecoder().decode([String].self, from: data) else {
@@ -22,6 +25,19 @@ class ImageService {
             }
 
             completion(imageURLStrings, nil)
+        }
+    }
+
+    func fetchImageWithURL(_ url: URL, completion: @escaping ImageLoadingCompletion) {
+        transport.fetchDataWithURL(url) { (data, response, error) in
+            guard error == nil,
+                let data = data,
+                let image = UIImage(data: data) else {
+                    completion(nil, error)
+                    return
+            }
+
+            completion(image, nil)
         }
     }
 }

@@ -13,7 +13,7 @@
 		78250583216B6ECC005CEAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78250581216B6ECC005CEAD9 /* LaunchScreen.storyboard */; };
 		78250594216B7909005CEAD9 /* ImagesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78250593216B7909005CEAD9 /* ImagesContainer.swift */; };
 		78250596216B7DAD005CEAD9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78250595216B7DAD005CEAD9 /* ImageService.swift */; };
-		78250599216B82E6005CEAD9 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78250598216B82E6005CEAD9 /* Networking.swift */; };
+		78250599216B82E6005CEAD9 /* NetworkingTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78250598216B82E6005CEAD9 /* NetworkingTransport.swift */; };
 		7825059C216B883A005CEAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825059B216B883A005CEAD9 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		78250584216B6ECC005CEAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78250593216B7909005CEAD9 /* ImagesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesContainer.swift; sourceTree = "<group>"; };
 		78250595216B7DAD005CEAD9 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		78250598216B82E6005CEAD9 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		78250598216B82E6005CEAD9 /* NetworkingTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTransport.swift; sourceTree = "<group>"; };
 		7825059B216B883A005CEAD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +114,9 @@
 		78250591216B78D1005CEAD9 /* ImageSelector */ = {
 			isa = PBXGroup;
 			children = (
-				7825059A216B8829005CEAD9 /* Presentation */,
 				78250592216B78E6005CEAD9 /* Model */,
+				782505A0216B9A21005CEAD9 /* Service */,
+				7825059A216B8829005CEAD9 /* Presentation */,
 			);
 			path = ImageSelector;
 			sourceTree = "<group>";
@@ -124,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				78250593216B7909005CEAD9 /* ImagesContainer.swift */,
-				78250595216B7DAD005CEAD9 /* ImageService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 		78250597216B82D8005CEAD9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				78250598216B82E6005CEAD9 /* Networking.swift */,
+				78250598216B82E6005CEAD9 /* NetworkingTransport.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -143,6 +143,14 @@
 				7825059B216B883A005CEAD9 /* ViewController.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		782505A0216B9A21005CEAD9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				78250595216B7DAD005CEAD9 /* ImageService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +228,7 @@
 				78250579216B6ECA005CEAD9 /* AppDelegate.swift in Sources */,
 				78250594216B7909005CEAD9 /* ImagesContainer.swift in Sources */,
 				78250596216B7DAD005CEAD9 /* ImageService.swift in Sources */,
-				78250599216B82E6005CEAD9 /* Networking.swift in Sources */,
+				78250599216B82E6005CEAD9 /* NetworkingTransport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

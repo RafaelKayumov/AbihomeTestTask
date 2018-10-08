@@ -13,9 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ImageService().fetchImageListWithCompletion { (imageLinks, error) in
+        let imageService = ImageService()
+
+        imageService.fetchImageListWithCompletion { (imageLinks, error) in
             imageLinks?.forEach {
-                print($0)
+                guard let imageURL = URL(string: $0) else { return }
+                imageService.fetchImageWithURL(imageURL) { image, _ in
+                    print(image)
+                }
             }
         }
     }
