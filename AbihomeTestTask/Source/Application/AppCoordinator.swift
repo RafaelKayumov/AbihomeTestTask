@@ -19,7 +19,6 @@ class AppCoordinator {
 
         let rootViewController = prepareRootViewController()
         let navigationController =  UINavigationController(rootViewController: rootViewController)
-        navigationController.isToolbarHidden = false
 
         window?.rootViewController = navigationController
         self.navigationController = navigationController

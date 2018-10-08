@@ -22,6 +22,12 @@
 		782505B0216BA7E8005CEAD9 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505AF216BA7E8005CEAD9 /* AppAssembly.swift */; };
 		782505B3216BAA2E005CEAD9 /* ImageSelectorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782505B2216BAA2E005CEAD9 /* ImageSelectorViewController.storyboard */; };
 		782505B7216BAAA4005CEAD9 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505B6216BAAA4005CEAD9 /* UIViewController+Storyboard.swift */; };
+		782505B9216BB5FB005CEAD9 /* ImageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505B8216BB5FB005CEAD9 /* ImageGridViewController.swift */; };
+		782505BB216BB81B005CEAD9 /* ImageChoiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505BA216BB81B005CEAD9 /* ImageChoiseViewController.swift */; };
+		782505BD216BB872005CEAD9 /* ImageChoiseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782505BC216BB872005CEAD9 /* ImageChoiseViewController.storyboard */; };
+		782505BF216BB87E005CEAD9 /* ImageGridViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782505BE216BB87E005CEAD9 /* ImageGridViewController.storyboard */; };
+		782505C3216BBFB8005CEAD9 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C2216BBFB8005CEAD9 /* ImageCell.swift */; };
+		782505C5216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C4216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		782505AF216BA7E8005CEAD9 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		782505B2216BAA2E005CEAD9 /* ImageSelectorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageSelectorViewController.storyboard; sourceTree = "<group>"; };
 		782505B6216BAAA4005CEAD9 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		782505B8216BB5FB005CEAD9 /* ImageGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridViewController.swift; sourceTree = "<group>"; };
+		782505BA216BB81B005CEAD9 /* ImageChoiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChoiseViewController.swift; sourceTree = "<group>"; };
+		782505BC216BB872005CEAD9 /* ImageChoiseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageChoiseViewController.storyboard; sourceTree = "<group>"; };
+		782505BE216BB87E005CEAD9 /* ImageGridViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageGridViewController.storyboard; sourceTree = "<group>"; };
+		782505C2216BBFB8005CEAD9 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		782505C4216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorViewDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +169,9 @@
 			isa = PBXGroup;
 			children = (
 				782505A5216BA4ED005CEAD9 /* Protocols */,
+				782505C0216BBDA2005CEAD9 /* Presenter */,
+				782505C1216BBDAA005CEAD9 /* View */,
 				782505B1216BAA17005CEAD9 /* Storyboards */,
-				782505A1216BA418005CEAD9 /* ImageSelectorPresenter.swift */,
-				7825059B216B883A005CEAD9 /* ImageSelectorViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -178,6 +190,7 @@
 				782505A9216BA517005CEAD9 /* ImageSelectorModuleInput.swift */,
 				782505A3216BA4E5005CEAD9 /* ImageSelectorViewOutput.swift */,
 				782505A7216BA501005CEAD9 /* ImageSelectorViewInput.swift */,
+				782505C4216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -186,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				782505B2216BAA2E005CEAD9 /* ImageSelectorViewController.storyboard */,
+				782505BE216BB87E005CEAD9 /* ImageGridViewController.storyboard */,
+				782505BC216BB872005CEAD9 /* ImageChoiseViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -204,6 +219,25 @@
 				782505B6216BAAA4005CEAD9 /* UIViewController+Storyboard.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		782505C0216BBDA2005CEAD9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				782505A1216BA418005CEAD9 /* ImageSelectorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		782505C1216BBDAA005CEAD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7825059B216B883A005CEAD9 /* ImageSelectorViewController.swift */,
+				782505B8216BB5FB005CEAD9 /* ImageGridViewController.swift */,
+				782505BA216BB81B005CEAD9 /* ImageChoiseViewController.swift */,
+				782505C2216BBFB8005CEAD9 /* ImageCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +298,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782505BD216BB872005CEAD9 /* ImageChoiseViewController.storyboard in Resources */,
 				78250583216B6ECC005CEAD9 /* LaunchScreen.storyboard in Resources */,
+				782505BF216BB87E005CEAD9 /* ImageGridViewController.storyboard in Resources */,
 				782505B3216BAA2E005CEAD9 /* ImageSelectorViewController.storyboard in Resources */,
 				78250580216B6ECC005CEAD9 /* Assets.xcassets in Resources */,
 			);
@@ -279,16 +315,20 @@
 			files = (
 				782505AE216BA6A9005CEAD9 /* AppCoordinator.swift in Sources */,
 				7825059C216B883A005CEAD9 /* ImageSelectorViewController.swift in Sources */,
+				782505C5216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift in Sources */,
 				78250579216B6ECA005CEAD9 /* AppDelegate.swift in Sources */,
 				78250594216B7909005CEAD9 /* ImagesContainer.swift in Sources */,
 				782505B7216BAAA4005CEAD9 /* UIViewController+Storyboard.swift in Sources */,
+				782505BB216BB81B005CEAD9 /* ImageChoiseViewController.swift in Sources */,
 				782505A2216BA418005CEAD9 /* ImageSelectorPresenter.swift in Sources */,
+				782505B9216BB5FB005CEAD9 /* ImageGridViewController.swift in Sources */,
 				782505AA216BA517005CEAD9 /* ImageSelectorModuleInput.swift in Sources */,
 				782505B0216BA7E8005CEAD9 /* AppAssembly.swift in Sources */,
 				78250596216B7DAD005CEAD9 /* ImageService.swift in Sources */,
 				78250599216B82E6005CEAD9 /* NetworkingTransport.swift in Sources */,
 				782505A8216BA501005CEAD9 /* ImageSelectorViewInput.swift in Sources */,
 				782505A4216BA4E5005CEAD9 /* ImageSelectorViewOutput.swift in Sources */,
+				782505C3216BBFB8005CEAD9 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

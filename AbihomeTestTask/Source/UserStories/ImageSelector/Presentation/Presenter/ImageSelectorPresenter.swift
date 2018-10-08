@@ -36,7 +36,7 @@ private extension ImageSelectorPresenter {
             self.imageService.fetchImagesForUrls(urls, with: {
                 self.applyImagesToContainer($0)
                 self.displayLoadingActivityInView(isLoading: false)
-                print(self.imagesContainer["https://d30y9cdsu7xlg0.cloudfront.net/png/177723-200.png"])
+                self.view.displayImages()
             })
         }
     }
@@ -58,9 +58,26 @@ private extension ImageSelectorPresenter {
     }
 }
 
+extension ImageSelectorPresenter: ImageSelectorViewDataProvider {
+
+    func imageForIndex(_ index: Int) -> UIImage? {
+        guard imagesContainer.imageLinks.indices.contains(index) else { return nil }
+        let link = imagesContainer.imageLinks[index]
+        return imagesContainer[link]
+    }
+
+    var imagesCount: Int {
+        return imagesContainer.imageLinks.count
+    }
+}
+
 extension ImageSelectorPresenter: ImageSelectorViewOutput {
 
     func onViewReady() {
+        loadList()
+    }
+
+    func onTriggerReload() {
         loadList()
     }
 }

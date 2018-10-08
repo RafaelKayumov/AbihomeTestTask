@@ -26,6 +26,7 @@ private extension AppAssembly {
         let imageService = ImageService()
         let imageSelectorPresenter = ImageSelectorPresenter(imageService: imageService, view: imageSelectorView)
         imageSelectorView.output = imageSelectorPresenter
+        imageSelectorView.viewDataProvider = imageSelectorPresenter
 
         return (module: imageSelectorPresenter, view: imageSelectorView)
     }

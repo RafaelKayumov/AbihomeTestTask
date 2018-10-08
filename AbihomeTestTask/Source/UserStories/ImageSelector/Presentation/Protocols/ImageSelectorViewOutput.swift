@@ -11,4 +11,5 @@ import Foundation
 protocol ImageSelectorViewOutput: AnyObject {
 
     func onViewReady()
+    func onTriggerReload()
 }
