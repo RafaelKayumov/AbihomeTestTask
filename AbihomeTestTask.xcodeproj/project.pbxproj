@@ -29,7 +29,23 @@
 		782505C3216BBFB8005CEAD9 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C2216BBFB8005CEAD9 /* ImageCell.swift */; };
 		782505C5216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C4216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift */; };
 		782505C7216CA315005CEAD9 /* Array+Penultimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C6216CA315005CEAD9 /* Array+Penultimate.swift */; };
+		782505CF216CB5D1005CEAD9 /* ImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505CE216CB5D1005CEAD9 /* ImageServiceTests.swift */; };
+		782505D6216CB6C5005CEAD9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78250595216B7DAD005CEAD9 /* ImageService.swift */; };
+		782505D7216CB769005CEAD9 /* NetworkingTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78250598216B82E6005CEAD9 /* NetworkingTransport.swift */; };
+		782505DA216CB852005CEAD9 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505D9216CB852005CEAD9 /* URLSessionDataTaskMock.swift */; };
+		782505DC216CB877005CEAD9 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505DB216CB877005CEAD9 /* URLSessionMock.swift */; };
+		782505DF216CBA17005CEAD9 /* ImagesList.json in Resources */ = {isa = PBXBuildFile; fileRef = 782505DE216CBA17005CEAD9 /* ImagesList.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		782505D1216CB5D1005CEAD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7825056D216B6ECA005CEAD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78250574216B6ECA005CEAD9;
+			remoteInfo = AbihomeTestTask;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		78250575216B6ECA005CEAD9 /* AbihomeTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbihomeTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,10 +72,23 @@
 		782505C2216BBFB8005CEAD9 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		782505C4216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorViewDataProvider.swift; sourceTree = "<group>"; };
 		782505C6216CA315005CEAD9 /* Array+Penultimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Penultimate.swift"; sourceTree = "<group>"; };
+		782505CC216CB5D1005CEAD9 /* AbihomeTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbihomeTestTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		782505CE216CB5D1005CEAD9 /* ImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceTests.swift; sourceTree = "<group>"; };
+		782505D0216CB5D1005CEAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		782505D9216CB852005CEAD9 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		782505DB216CB877005CEAD9 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		782505DE216CBA17005CEAD9 /* ImagesList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ImagesList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		78250572216B6ECA005CEAD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782505C9216CB5D1005CEAD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				78250577216B6ECA005CEAD9 /* AbihomeTestTask */,
+				782505CD216CB5D1005CEAD9 /* AbihomeTestTaskTests */,
 				78250576216B6ECA005CEAD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				78250575216B6ECA005CEAD9 /* AbihomeTestTask.app */,
+				782505CC216CB5D1005CEAD9 /* AbihomeTestTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +274,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		782505CD216CB5D1005CEAD9 /* AbihomeTestTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				782505DD216CBA04005CEAD9 /* MockData */,
+				782505D8216CB82C005CEAD9 /* Common */,
+				782505CE216CB5D1005CEAD9 /* ImageServiceTests.swift */,
+				782505D0216CB5D1005CEAD9 /* Info.plist */,
+			);
+			path = AbihomeTestTaskTests;
+			sourceTree = "<group>";
+		};
+		782505D8216CB82C005CEAD9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				782505D9216CB852005CEAD9 /* URLSessionDataTaskMock.swift */,
+				782505DB216CB877005CEAD9 /* URLSessionMock.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		782505DD216CBA04005CEAD9 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				782505DE216CBA17005CEAD9 /* ImagesList.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +322,24 @@
 			productReference = 78250575216B6ECA005CEAD9 /* AbihomeTestTask.app */;
 			productType = "com.apple.product-type.application";
 		};
+		782505CB216CB5D1005CEAD9 /* AbihomeTestTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 782505D3216CB5D1005CEAD9 /* Build configuration list for PBXNativeTarget "AbihomeTestTaskTests" */;
+			buildPhases = (
+				782505C8216CB5D1005CEAD9 /* Sources */,
+				782505C9216CB5D1005CEAD9 /* Frameworks */,
+				782505CA216CB5D1005CEAD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				782505D2216CB5D1005CEAD9 /* PBXTargetDependency */,
+			);
+			name = AbihomeTestTaskTests;
+			productName = AbihomeTestTaskTests;
+			productReference = 782505CC216CB5D1005CEAD9 /* AbihomeTestTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,6 +352,10 @@
 				TargetAttributes = {
 					78250574216B6ECA005CEAD9 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					782505CB216CB5D1005CEAD9 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 78250574216B6ECA005CEAD9;
 					};
 				};
 			};
@@ -292,6 +373,7 @@
 			projectRoot = "";
 			targets = (
 				78250574216B6ECA005CEAD9 /* AbihomeTestTask */,
+				782505CB216CB5D1005CEAD9 /* AbihomeTestTaskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -306,6 +388,14 @@
 				782505BF216BB87E005CEAD9 /* ImageGridViewController.storyboard in Resources */,
 				782505B3216BAA2E005CEAD9 /* ImageSelectorViewController.storyboard in Resources */,
 				78250580216B6ECC005CEAD9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782505CA216CB5D1005CEAD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782505DF216CBA17005CEAD9 /* ImagesList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +426,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		782505C8216CB5D1005CEAD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782505DC216CB877005CEAD9 /* URLSessionMock.swift in Sources */,
+				782505CF216CB5D1005CEAD9 /* ImageServiceTests.swift in Sources */,
+				782505DA216CB852005CEAD9 /* URLSessionDataTaskMock.swift in Sources */,
+				782505D6216CB6C5005CEAD9 /* ImageService.swift in Sources */,
+				782505D7216CB769005CEAD9 /* NetworkingTransport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		782505D2216CB5D1005CEAD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78250574216B6ECA005CEAD9 /* AbihomeTestTask */;
+			targetProxy = 782505D1216CB5D1005CEAD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		78250581216B6ECC005CEAD9 /* LaunchScreen.storyboard */ = {
@@ -500,6 +610,44 @@
 			};
 			name = Release;
 		};
+		782505D4216CB5D1005CEAD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AbihomeTestTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Rafael-Kayumov.AbihomeTestTaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbihomeTestTask.app/AbihomeTestTask";
+			};
+			name = Debug;
+		};
+		782505D5216CB5D1005CEAD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AbihomeTestTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Rafael-Kayumov.AbihomeTestTaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbihomeTestTask.app/AbihomeTestTask";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -517,6 +665,15 @@
 			buildConfigurations = (
 				78250588216B6ECC005CEAD9 /* Debug */,
 				78250589216B6ECC005CEAD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		782505D3216CB5D1005CEAD9 /* Build configuration list for PBXNativeTarget "AbihomeTestTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782505D4216CB5D1005CEAD9 /* Debug */,
+				782505D5216CB5D1005CEAD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -16,7 +16,10 @@ class NetworkingTransport {
 
     typealias DataTaskCompletion = (Data?, URLResponse?, Error?) -> Void
 
-    private(set) var session = URLSession(configuration: URLSessionConfiguration.default)
+    private let session: URLSession
+    init(session: URLSession = URLSession(configuration: URLSessionConfiguration.default)) {
+        self.session = session
+    }
 
     func query(_ route: RouteProviding, with completion: @escaping DataTaskCompletion) {
         var request = URLRequest(url: route.url)

@@ -14,7 +14,10 @@ class ImageService {
     typealias ImageLoadingCompletion = (UIImage?, Error?) -> Void
     typealias ImagesByURLSLoadingCompletion = ([String: UIImage]) -> Void
 
-    private(set) var transport = NetworkingTransport()
+    private let transport: NetworkingTransport
+    init(transport: NetworkingTransport = NetworkingTransport()) {
+        self.transport = transport
+    }
 
     func fetchImageListWithCompletion(_ completion: @escaping ImageListLoadingCompletion) {
         transport.query(Route.list) { (data, response, error) in
