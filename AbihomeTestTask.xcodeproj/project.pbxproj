@@ -28,6 +28,7 @@
 		782505BF216BB87E005CEAD9 /* ImageGridViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782505BE216BB87E005CEAD9 /* ImageGridViewController.storyboard */; };
 		782505C3216BBFB8005CEAD9 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C2216BBFB8005CEAD9 /* ImageCell.swift */; };
 		782505C5216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C4216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift */; };
+		782505C7216CA315005CEAD9 /* Array+Penultimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C6216CA315005CEAD9 /* Array+Penultimate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		782505BE216BB87E005CEAD9 /* ImageGridViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageGridViewController.storyboard; sourceTree = "<group>"; };
 		782505C2216BBFB8005CEAD9 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		782505C4216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorViewDataProvider.swift; sourceTree = "<group>"; };
+		782505C6216CA315005CEAD9 /* Array+Penultimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Penultimate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				782505B6216BAAA4005CEAD9 /* UIViewController+Storyboard.swift */,
+				782505C6216CA315005CEAD9 /* Array+Penultimate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				782505B7216BAAA4005CEAD9 /* UIViewController+Storyboard.swift in Sources */,
 				782505BB216BB81B005CEAD9 /* ImageChoiseViewController.swift in Sources */,
 				782505A2216BA418005CEAD9 /* ImageSelectorPresenter.swift in Sources */,
+				782505C7216CA315005CEAD9 /* Array+Penultimate.swift in Sources */,
 				782505B9216BB5FB005CEAD9 /* ImageGridViewController.swift in Sources */,
 				782505AA216BA517005CEAD9 /* ImageSelectorModuleInput.swift in Sources */,
 				782505B0216BA7E8005CEAD9 /* AppAssembly.swift in Sources */,

@@ -12,4 +12,5 @@ protocol ImageSelectorViewOutput: AnyObject {
 
     func onViewReady()
     func onTriggerReload()
+    func onImageSelectWithIndex(_ index: Int)
 }

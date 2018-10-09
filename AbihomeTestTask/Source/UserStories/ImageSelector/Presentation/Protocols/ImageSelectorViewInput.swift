@@ -6,10 +6,12 @@
 //  Copyright © 2018 Rafael Kayumov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ImageSelectorViewInput: AnyObject {
 
     func displayLoadingIsInProgress(_ inProgress: Bool)
     func displayImages()
+    func selectCurrentImageWithIndexInGrid(_ index: Int)
+    func setupTabsWithCurrentSelectedImage(_ currentImage: UIImage?, previousImage: UIImage?)
 }

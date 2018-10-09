@@ -16,9 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="7B4-zt-hx6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ab0-sS-taG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pHJ-NH-su2" firstAttribute="bottom" secondItem="Ab0-sS-taG" secondAttribute="bottom" id="4dj-eV-HZ1"/>
+                            <constraint firstItem="pHJ-NH-su2" firstAttribute="trailing" secondItem="Ab0-sS-taG" secondAttribute="trailing" id="eBF-F1-sTB"/>
+                            <constraint firstItem="Ab0-sS-taG" firstAttribute="top" secondItem="pHJ-NH-su2" secondAttribute="top" id="wF4-M5-kHh"/>
+                            <constraint firstItem="Ab0-sS-taG" firstAttribute="leading" secondItem="pHJ-NH-su2" secondAttribute="leading" id="xj3-a7-dop"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pHJ-NH-su2"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ab0-sS-taG" id="TeA-hT-jJ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTk-9x-DN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

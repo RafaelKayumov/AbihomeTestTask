@@ -15,6 +15,7 @@ protocol ImageGridViewDataProvider: AnyObject {
 
 protocol ImageGridViewResponder: AnyObject {
     func onRefresh()
+    func onImageSelectWithIndex(_ index: Int)
 }
 
 private let kColumntsCount: CGFloat = 3
@@ -63,6 +64,10 @@ class ImageGridViewController: UIViewController, StoryboardBased {
             refreshControl.endRefreshing()
         }
     }
+
+    func selectImageWithIndex(_ index: Int) {
+        collectionView.selectItem(at: IndexPath(item: index, section: 0), animated: true, scrollPosition: UICollectionView.ScrollPosition.top)
+    }
 }
 
 extension ImageGridViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -79,5 +84,9 @@ extension ImageGridViewController: UICollectionViewDataSource, UICollectionViewD
         }
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        responder.onImageSelectWithIndex(indexPath.item)
     }
 }

@@ -10,6 +10,11 @@ import UIKit
 
 private let kImageSelectionHistoryCapacity = 2
 
+enum ImageHistoryPosition {
+    case current
+    case previous
+}
+
 class ImagesContainer {
 
     private(set) var imageCache = NSCache<NSString, UIImage>()
@@ -20,14 +25,35 @@ class ImagesContainer {
         }
     }
 
-    private(set) var imageSelectionHistory: [String] = {
-        var array = [String]()
-        array.reserveCapacity(kImageSelectionHistoryCapacity)
-        return array
-    }()
+    private(set) var imageSelectionHistory = [String]()
 
     private func removeMissingFromHistory() {
         imageSelectionHistory = imageSelectionHistory.filter { imageLinks.contains($0) }
+    }
+
+    func applyImageLinkWithIndexToHistory(index: Int) {
+        guard imageLinks.indices.contains(index) else { return }
+        let link = imageLinks[index]
+        imageSelectionHistory.append(link)
+        imageSelectionHistory = Array(imageSelectionHistory.suffix(2))
+    }
+
+    func imageFromShistoryWithPosition(_ position: ImageHistoryPosition) -> UIImage? {
+        var imageLink: String?
+        switch position {
+        case .current:
+            imageLink = imageSelectionHistory.last
+        case .previous:
+            imageLink = imageSelectionHistory.penultimate
+        }
+
+        guard let linkValid = imageLink else { return nil }
+        return self[linkValid]
+    }
+
+    var indexOfLastSelectedImage: Int? {
+        guard let link = imageSelectionHistory.last else { return nil }
+        return imageLinks.firstIndex(of: link)
     }
 }
 

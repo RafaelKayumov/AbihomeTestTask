@@ -35,8 +35,11 @@ private extension ImageSelectorPresenter {
             let urls = imageLinks.compactMap { URL(string: $0) }
             self.imageService.fetchImagesForUrls(urls, with: {
                 self.applyImagesToContainer($0)
-                self.displayLoadingActivityInView(isLoading: false)
                 self.view.displayImages()
+                self.applyImageSelectionHistoryToView()
+                self.selectImageInGridIfNeeded()
+
+                self.displayLoadingActivityInView(isLoading: false)
             })
         }
     }
@@ -55,6 +58,17 @@ private extension ImageSelectorPresenter {
         DispatchQueue.main.async {
             self.view.displayLoadingIsInProgress(isLoading)
         }
+    }
+
+    func applyImageSelectionHistoryToView() {
+        let currentSelectedImage = imagesContainer.imageFromShistoryWithPosition(.current)
+        let previousSelectedImage = imagesContainer.imageFromShistoryWithPosition(.previous)
+        view.setupTabsWithCurrentSelectedImage(currentSelectedImage, previousImage: previousSelectedImage)
+    }
+
+    func selectImageInGridIfNeeded() {
+        guard let indexOfLastSelectedImage = imagesContainer.indexOfLastSelectedImage else { return }
+        view.selectCurrentImageWithIndexInGrid(indexOfLastSelectedImage)
     }
 }
 
@@ -80,8 +94,11 @@ extension ImageSelectorPresenter: ImageSelectorViewOutput {
     func onTriggerReload() {
         loadList()
     }
+
+    func onImageSelectWithIndex(_ index: Int) {
+        imagesContainer.applyImageLinkWithIndexToHistory(index: index)
+        applyImageSelectionHistoryToView()
+    }
 }
 
-extension ImageSelectorPresenter: ImageSelectorModuleInput {
-    
-}
+extension ImageSelectorPresenter: ImageSelectorModuleInput {}

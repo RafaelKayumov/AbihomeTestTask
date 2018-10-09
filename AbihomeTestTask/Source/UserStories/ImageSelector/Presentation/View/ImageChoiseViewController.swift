@@ -8,14 +8,15 @@
 
 import UIKit
 
-enum ImageChoise {
-    case current
-    case previous
-}
-
 class ImageChoiseViewController: UIViewController, StoryboardBased {
 
-    var imageChoiseType = ImageChoise.current
+    var image: UIImage? {
+        didSet {
+            displayCurrentImageIfNeeded()
+        }
+    }
+
+    @IBOutlet private weak var imageView: UIImageView!
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -24,6 +25,11 @@ class ImageChoiseViewController: UIViewController, StoryboardBased {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        displayCurrentImageIfNeeded()
+    }
+
+    private func displayCurrentImageIfNeeded() {
+        guard isViewLoaded else { return }
+        imageView.image = image
     }
 }

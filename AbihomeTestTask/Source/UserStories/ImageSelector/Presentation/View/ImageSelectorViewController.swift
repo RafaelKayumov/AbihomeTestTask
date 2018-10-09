@@ -27,12 +27,9 @@ class ImageSelectorViewController: UITabBarController, StoryboardBased {
 
         let currentSelectedImageViewController = ImageChoiseViewController.instantiate()
         currentSelectedImageViewController.title = "Current Selection"
-        currentSelectedImageViewController.imageChoiseType = .current
 
         let previousSelectedImageViewController = ImageChoiseViewController.instantiate()
         previousSelectedImageViewController.title = "Previous Selection"
-        previousSelectedImageViewController.imageChoiseType = .previous
-
         viewControllers = [imageGridViewController, currentSelectedImageViewController, previousSelectedImageViewController]
 
         self.imageGridViewController = imageGridViewController
@@ -64,6 +61,10 @@ extension ImageSelectorViewController: ImageGridViewResponder {
     func onRefresh() {
         output.onTriggerReload()
     }
+
+    func onImageSelectWithIndex(_ index: Int) {
+        output.onImageSelectWithIndex(index)
+    }
 }
 
 extension ImageSelectorViewController: ImageSelectorViewInput {
@@ -75,6 +76,13 @@ extension ImageSelectorViewController: ImageSelectorViewInput {
     func displayLoadingIsInProgress(_ inProgress: Bool) {
         imageGridViewController.displayLoadingIsInProgress(inProgress)
     }
+
+    func selectCurrentImageWithIndexInGrid(_ index: Int) {
+        imageGridViewController.selectImageWithIndex(index)
+    }
+
+    func setupTabsWithCurrentSelectedImage(_ currentImage: UIImage?, previousImage: UIImage?) {
+        currentSelectedImageViewController.image = currentImage
+        previousSelectedImageViewController.image = previousImage
+    }
 }
-
-
