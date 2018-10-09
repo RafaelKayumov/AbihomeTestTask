@@ -23,7 +23,7 @@ class ImageServiceTests: XCTestCase {
         let imagesListBundleURL = Bundle(for: type(of: self)).url(forResource: "ImagesList", withExtension: "json")
         let imageListData = try? Data.init(contentsOf: imagesListBundleURL!)
         let session = URLSessionMock()
-        session.data = imageListData
+        session.data[ImageService.Route.list.url.absoluteString] = imageListData
         let transport = NetworkingTransport(session: session)
         let service = ImageService(transport: transport)
 

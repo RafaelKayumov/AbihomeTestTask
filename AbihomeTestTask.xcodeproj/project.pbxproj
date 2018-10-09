@@ -35,6 +35,17 @@
 		782505DA216CB852005CEAD9 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505D9216CB852005CEAD9 /* URLSessionDataTaskMock.swift */; };
 		782505DC216CB877005CEAD9 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505DB216CB877005CEAD9 /* URLSessionMock.swift */; };
 		782505DF216CBA17005CEAD9 /* ImagesList.json in Resources */ = {isa = PBXBuildFile; fileRef = 782505DE216CBA17005CEAD9 /* ImagesList.json */; };
+		782505E2216CBE51005CEAD9 /* ImageSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505E1216CBE51005CEAD9 /* ImageSelectionTests.swift */; };
+		782505E5216CBE85005CEAD9 /* ImageSelectorViewInputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505E4216CBE85005CEAD9 /* ImageSelectorViewInputMock.swift */; };
+		782505E6216CBE97005CEAD9 /* ImageSelectorViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505A7216BA501005CEAD9 /* ImageSelectorViewInput.swift */; };
+		782505E7216CBF2C005CEAD9 /* ImageSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505A1216BA418005CEAD9 /* ImageSelectorPresenter.swift */; };
+		782505EA216CC0B7005CEAD9 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 782505E8216CC0B6005CEAD9 /* second.png */; };
+		782505EB216CC0B7005CEAD9 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 782505E9216CC0B6005CEAD9 /* first.png */; };
+		782505EE216CC2F7005CEAD9 /* ImageSelectorViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C4216BC5F1005CEAD9 /* ImageSelectorViewDataProvider.swift */; };
+		782505EF216CC309005CEAD9 /* ImageSelectorModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505A9216BA517005CEAD9 /* ImageSelectorModuleInput.swift */; };
+		782505F0216CC30B005CEAD9 /* ImageSelectorViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505A3216BA4E5005CEAD9 /* ImageSelectorViewOutput.swift */; };
+		782505F1216CC31A005CEAD9 /* ImagesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78250593216B7909005CEAD9 /* ImagesContainer.swift */; };
+		782505F2216CC326005CEAD9 /* Array+Penultimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782505C6216CA315005CEAD9 /* Array+Penultimate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +89,10 @@
 		782505D9216CB852005CEAD9 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		782505DB216CB877005CEAD9 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		782505DE216CBA17005CEAD9 /* ImagesList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ImagesList.json; sourceTree = "<group>"; };
+		782505E1216CBE51005CEAD9 /* ImageSelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionTests.swift; sourceTree = "<group>"; };
+		782505E4216CBE85005CEAD9 /* ImageSelectorViewInputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorViewInputMock.swift; sourceTree = "<group>"; };
+		782505E8216CC0B6005CEAD9 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		782505E9216CC0B6005CEAD9 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,7 +294,8 @@
 			children = (
 				782505DD216CBA04005CEAD9 /* MockData */,
 				782505D8216CB82C005CEAD9 /* Common */,
-				782505CE216CB5D1005CEAD9 /* ImageServiceTests.swift */,
+				782505E0216CBE28005CEAD9 /* ImageServiceTests */,
+				782505E3216CBE56005CEAD9 /* ImageSelectionTests */,
 				782505D0216CB5D1005CEAD9 /* Info.plist */,
 			);
 			path = AbihomeTestTaskTests;
@@ -297,9 +313,28 @@
 		782505DD216CBA04005CEAD9 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
+				782505E9216CC0B6005CEAD9 /* first.png */,
+				782505E8216CC0B6005CEAD9 /* second.png */,
 				782505DE216CBA17005CEAD9 /* ImagesList.json */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		782505E0216CBE28005CEAD9 /* ImageServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				782505CE216CB5D1005CEAD9 /* ImageServiceTests.swift */,
+			);
+			path = ImageServiceTests;
+			sourceTree = "<group>";
+		};
+		782505E3216CBE56005CEAD9 /* ImageSelectionTests */ = {
+			isa = PBXGroup;
+			children = (
+				782505E1216CBE51005CEAD9 /* ImageSelectionTests.swift */,
+				782505E4216CBE85005CEAD9 /* ImageSelectorViewInputMock.swift */,
+			);
+			path = ImageSelectionTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,7 +390,6 @@
 					};
 					782505CB216CB5D1005CEAD9 = {
 						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 78250574216B6ECA005CEAD9;
 					};
 				};
 			};
@@ -395,6 +429,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782505EA216CC0B7005CEAD9 /* second.png in Resources */,
+				782505EB216CC0B7005CEAD9 /* first.png in Resources */,
 				782505DF216CBA17005CEAD9 /* ImagesList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,10 +466,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782505E7216CBF2C005CEAD9 /* ImageSelectorPresenter.swift in Sources */,
+				782505E5216CBE85005CEAD9 /* ImageSelectorViewInputMock.swift in Sources */,
+				782505EE216CC2F7005CEAD9 /* ImageSelectorViewDataProvider.swift in Sources */,
 				782505DC216CB877005CEAD9 /* URLSessionMock.swift in Sources */,
 				782505CF216CB5D1005CEAD9 /* ImageServiceTests.swift in Sources */,
 				782505DA216CB852005CEAD9 /* URLSessionDataTaskMock.swift in Sources */,
 				782505D6216CB6C5005CEAD9 /* ImageService.swift in Sources */,
+				782505E2216CBE51005CEAD9 /* ImageSelectionTests.swift in Sources */,
+				782505F2216CC326005CEAD9 /* Array+Penultimate.swift in Sources */,
+				782505F0216CC30B005CEAD9 /* ImageSelectorViewOutput.swift in Sources */,
+				782505F1216CC31A005CEAD9 /* ImagesContainer.swift in Sources */,
+				782505E6216CBE97005CEAD9 /* ImageSelectorViewInput.swift in Sources */,
+				782505EF216CC309005CEAD9 /* ImageSelectorModuleInput.swift in Sources */,
 				782505D7216CB769005CEAD9 /* NetworkingTransport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,7 +658,6 @@
 		782505D4216CB5D1005CEAD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AbihomeTestTaskTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -625,14 +669,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbihomeTestTask.app/AbihomeTestTask";
 			};
 			name = Debug;
 		};
 		782505D5216CB5D1005CEAD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AbihomeTestTaskTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -644,7 +686,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbihomeTestTask.app/AbihomeTestTask";
 			};
 			name = Release;
 		};

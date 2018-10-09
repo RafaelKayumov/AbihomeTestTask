@@ -10,15 +10,15 @@ import Foundation
 
 class URLSessionMock: URLSession {
 
-    var data: Data?
+    var data = [String: Data]()
     var error: Error?
 
-    override func dataTask ( with request: URLRequest, completionHandler: @escaping NetworkingTransport.DataTaskCompletion) -> URLSessionDataTask {
+    override func dataTask (with request: URLRequest, completionHandler: @escaping NetworkingTransport.DataTaskCompletion) -> URLSessionDataTask {
         let data = self.data
         let error = self.error
 
         return URLSessionDataTaskMock {
-            completionHandler(data, nil, error)
+            completionHandler(data[request.url!.absoluteString], nil, error)
         }
     }
 }

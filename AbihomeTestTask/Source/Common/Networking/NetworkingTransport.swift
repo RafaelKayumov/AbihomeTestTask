@@ -16,7 +16,7 @@ class NetworkingTransport {
 
     typealias DataTaskCompletion = (Data?, URLResponse?, Error?) -> Void
 
-    private let session: URLSession
+    let session: URLSession
     init(session: URLSession = URLSession(configuration: URLSessionConfiguration.default)) {
         self.session = session
     }
