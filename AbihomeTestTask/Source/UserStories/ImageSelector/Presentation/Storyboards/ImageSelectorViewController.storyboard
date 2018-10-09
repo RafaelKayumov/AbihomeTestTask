@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Image Selector View Controller-->
+        <!--Images Test-->
         <scene sceneID="DhU-rT-VZK">
             <objects>
-                <tabBarController storyboardIdentifier="ImageSelectorViewController" id="1ld-wK-bD1" customClass="ImageSelectorViewController" customModule="AbihomeTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ImageSelectorViewController" title="Images Test" id="1ld-wK-bD1" customClass="ImageSelectorViewController" customModule="AbihomeTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zH7-7I-T5h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

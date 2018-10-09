@@ -34,20 +34,24 @@ class ImagesContainer {
     func applyImageLinkWithIndexToHistory(index: Int) {
         guard imageLinks.indices.contains(index) else { return }
         let link = imageLinks[index]
+
+        guard imageLinkFromHistoryWithPosition(.current) != link else { return }
+
         imageSelectionHistory.append(link)
         imageSelectionHistory = Array(imageSelectionHistory.suffix(2))
     }
 
-    func imageFromShistoryWithPosition(_ position: ImageHistoryPosition) -> UIImage? {
-        var imageLink: String?
+    func imageLinkFromHistoryWithPosition(_ position: ImageHistoryPosition) -> String? {
         switch position {
         case .current:
-            imageLink = imageSelectionHistory.last
+            return imageSelectionHistory.last
         case .previous:
-            imageLink = imageSelectionHistory.penultimate
+            return imageSelectionHistory.penultimate
         }
+    }
 
-        guard let linkValid = imageLink else { return nil }
+    func imageFromHistoryWithPosition(_ position: ImageHistoryPosition) -> UIImage? {
+        guard let linkValid = imageLinkFromHistoryWithPosition(position) else { return nil }
         return self[linkValid]
     }
 

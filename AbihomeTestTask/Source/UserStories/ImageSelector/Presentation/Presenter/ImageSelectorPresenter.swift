@@ -61,8 +61,8 @@ private extension ImageSelectorPresenter {
     }
 
     func applyImageSelectionHistoryToView() {
-        let currentSelectedImage = imagesContainer.imageFromShistoryWithPosition(.current)
-        let previousSelectedImage = imagesContainer.imageFromShistoryWithPosition(.previous)
+        let currentSelectedImage = imagesContainer.imageFromHistoryWithPosition(.current)
+        let previousSelectedImage = imagesContainer.imageFromHistoryWithPosition(.previous)
         view.setupTabsWithCurrentSelectedImage(currentSelectedImage, previousImage: previousSelectedImage)
     }
 
